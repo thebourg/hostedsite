@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /hidden-pages/
+Disallow: /en/hidden-pages/
+# To allow Google Sitemaps
+Sitemap: https://seb.se/sitemap.ashx

@@ -1,0 +1,67 @@
+
+<html>
+<body>
+	<head>
+<style>
+.center {
+    margin: auto;
+    width: 20%;
+    border: 1px solid #808080;
+    padding-left: 100px;
+		padding-right: 60px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		width: 200px;
+
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+		text-align: left;
+		font-size: 19px;
+}
+
+
+</style>
+</head>
+<div class="center" align="center">
+<form name=Form1 action= "index_loggedin.php" method=get>
+
+<div class="b">
+<h2 >Username </h2>
+<h2><input size="22" text-align="left" type="text" name="username">
+</h2>
+
+<h2>Password </h2>
+<h2><input size="22" align="right" type="password" name="password">
+</h2>
+
+
+<h2>
+<input type="submit" target='_self' align="right" value="Login" size="30" name="button1" onclick="return OnButton1();">
+</h2>
+</div>
+</div>
+
+<script language=javascript>
+<!--
+function OnButton1()
+{
+		document.Form1.action = "index_loggedin.php"    // First target
+		//document.Form1.target = "iframe1";    // Open in a iframe
+		//document.Form1.submit();        // Submit the page
+		//document.Form1.action = "test.html"    // Second target
+		//document.Form1.target = "iframe2";    // Open in a iframe
+		//document.Form1.submit();      // Submit the page
+}
+//var data = document.getElementById('name').innerHTML;
+//This will get the content from the div above with the id of "dataDiv"
+
+//document.getElementById("name").setAttribute("href","index_loggedin.html?var="+data);
+
+
+-->
+</script>
+</div>
+</body>
+</html>
