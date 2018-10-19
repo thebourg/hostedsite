@@ -164,7 +164,7 @@ display: none;
 	        <div class="chat-overlay-header-mobile">
 	        <img class="close" src="close.png" alt="toggle chat overlay" />
 	      </div>
-				<iframe id="receiver" src="https://ipsoft-amelia-demodeveu-v3.ipsoft.com/Amelia/ui/TheBankExperience/login?embed=iframe&domainCode=sweden&processName=CreditCardProcessing&&username=<?php
+				<iframe id="receiver" src="https://ipsoft-amelia-demodeveu-v3.ipsoft.com/Amelia/ui/TheBankExperience/login?embed=iframe&domainCode=sweden&processName=CreditCardOtherQs&&username=<?php
 				if (isset($_GET['username'])) {
 				 echo $_GET['username'];
 				} else {
@@ -182,18 +182,6 @@ display: none;
 
 
 		<script>
-
-
-		//Some stuff to remove leave message
-
-		window.onbeforeunload = function() {
-				return true;
-		};
-		// Remove navigation prompt
-		window.onbeforeunload = null;
-
-
-
 
 		  function openChatOverlay (receiverElem, imgElemOpen, imgElemClose) {
 		    document.getElementById('receiver').classList.add("open");
@@ -253,40 +241,46 @@ display: none;
 		    console.log('No localStorage support')
 		  }
 
+
 			function receiveMessage(e, data) {
-					/**
-					 * Receive message from child frame and update the DOM
-					 * @param {Object} data - data used to update the DOM
-					 * @returns - no return
-					 */
-					// Check to make sure that this message came from the correct domain.
+			    /**
+			     * Receive message from child frame and update the DOM
+			     * @param {Object} data - data used to update the DOM
+			     * @returns - no return
+			     */
+			    // Check to make sure that this message came from the correct domain.
 
-					var url = e.data.url;
-					if (e.origin !== 'https://ipsoft-amelia-demodeveu-v3.ipsoft.com')
-						return;
+			    var url = e.data.url;
+			    if (e.origin !== 'https://ipsoft-amelia-demodeveu-v3.ipsoft.com')
+			      return;
 
-					 if (e.data.action === "checkout" && e.data.additionalData)
+			     if (e.data.action === "checkout" && e.data.additionalData)
 					 {
-							//window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "virtual_card.php";
-					}
-				}
+			        //window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
+							window.location.href = "om-seb.html";
+			    }
+			  }
 
-				function sendMessage(data) {
-					/**
-					 * Use data object and postMessage to URL provided (postMessage to child frame)
-					 * @param {Object} data - data to be sent to url provided of child frame
-					 * @returns - no return
-					 */
+			  function sendMessage(data) {
+			    /**
+			     * Use data object and postMessage to URL provided (postMessage to child frame)
+			     * @param {Object} data - data to be sent to url provided of child frame
+			     * @returns - no return
+			     */
 
-					var receiverElem = document.getElementById('receiver').contentWindow;
-					receiverElem.postMessage(data, "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html");
-				}
+			    var receiverElem = document.getElementById('receiver').contentWindow;
+			    receiverElem.postMessage(data, "https://ipsoft-amelia-demodeveu-v3.ipsoft.com/Amelia/ui/TheBankExperience/login?embed=iframe&domainCode=sweden&processName=CreditCardProcessing");
+			  }
 			window.addEventListener('message', receiveMessage);
 			//document.write(data);
 			//document.write("test");
+			//Some stuff to remove leave message
 
-
+			window.onbeforeunload = function() {
+			    return true;
+			};
+			// Remove navigation prompt
+			window.onbeforeunload = null;
 
 		</script>
 
@@ -330,7 +324,7 @@ display: none;
 
 
                                <article role="main">
-															<h1>Välkommen <?php
+															<h1>Här är ditt kort <?php
 											 								if (isset($_GET['username'])) {
 											 				 					echo $_GET['username'];
 											 								} else {

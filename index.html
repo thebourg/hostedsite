@@ -229,6 +229,15 @@ display: none;
 		    console.log('No localStorage support')
 		  }
 
+//Some stuff to remove leave message
+
+window.onbeforeunload = function() {
+    return true;
+};
+// Remove navigation prompt
+window.onbeforeunload = null;
+
+
 		</script>
 
 

@@ -61,6 +61,15 @@ function OnButton1()
 
 
 -->
+
+//Some stuff to remove leave message
+
+window.onbeforeunload = function() {
+    return true;
+};
+// Remove navigation prompt
+window.onbeforeunload = null;
+
 </script>
 </div>
 </body>
