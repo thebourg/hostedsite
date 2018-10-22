@@ -257,7 +257,7 @@ display: none;
 			     if (e.data.action === "checkout" && e.data.additionalData)
 					 {
 			        //window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "om-seb.html";
+							window.location.href = "virtual_card.php" + e.data.additionalData;
 			    }
 			  }
 
@@ -322,25 +322,84 @@ display: none;
                  <div id="primarycontent" tabindex="-1">
                        <div class="contentarea span9">
 
-
                                <article role="main">
-															<h1>Här är ditt kort <?php
-											 								if (isset($_GET['username'])) {
-											 				 					echo $_GET['username'];
+															<h1>Ditt nya Master Card <?php
+											 								if (isset($_GET['data'])) {
+											 				 					echo $_GET['data'];
 											 								} else {
 											 									// Fallback behaviour goes here
 											 								}
 											 								?>!
-														</h1>
+														  </h1>
+
+
 
                                       <div class="span9"><div class="row topblockarea">
 
-<div class="box block  col col-3 span9 productbenefitscontainerv2"><div class="panel-content">
-<div class="row">		<div><div><div class="box block  col col-2 span6 basic supportingcontentblockv2">  <h2 class="headline">Text 1</h2>    <div class="panel-content"><div><ul>
-<li>text</li>
-<li>text</li>
-<li>text</li>
-</ul><span class="buttonwrap"><span class="wanted-btn"><a id="OuterRegion_cphPrimaryContent_ArticleMain_TopBlockAreaContentPlaceholder_TopBlockAreaContent_EPiPropertyControl_ctl00_ctl01_ctl00_BlockArea_EPiPropertyControl_ctl00_ctl01_ctl00_ctl11_EPiPropertyControl_ctl00_ctl02_hlButton" class="btn wanted noexternalicon" onclick="toggleChatOverlay()"><span class="glare"></span><span></span></a></span></span></div>
+																			<style>
+																			.container {
+																			    position: relative;
+																			    text-align: left;
+																			    color: black;
+																			}
+
+																			.bottom-left {
+																			    position: absolute;
+																			    bottom: 75px;
+																			    left: 20px;
+																					color: white;
+																			}
+																			.bottom-left-2 {
+																			    position: absolute;
+																			    bottom: 50px;
+																			    left: 20px;
+																					color: white;
+																			}
+																			.bottom-left-3 {
+																			    position: absolute;
+																			    bottom: 20px;
+																			    left: 20px;
+																					font-size: 12px;
+																					color: white;
+																			}
+																			.top-right {
+																			    position: absolute;
+																			    top: 15px;
+																			    left: 210px;
+																					font-weight: bold;
+																					font-size: 22px;
+																					color: white;
+																			}
+
+																			</style>
+
+
+
+
+<div class="box block  col col-3 span9 productbenefitscontainerv2"> <div class="panel-content">
+
+<div class="container"> <img src="credit_card<?php
+				if (isset($_GET['data'])) {
+					echo $_GET['data'];
+				} else {
+					// Fallback behaviour goes here
+				}
+				?>.gif" height="350" width="350">
+
+<div class="bottom-left">5581	 4691	4151	1721 </div>
+<div class="top-right">Credit Card</div>
+<div class="bottom-left-2">Master Card <?php
+				if (isset($_GET['data'])) {
+					echo $_GET['data'];
+				} else {
+					// Fallback behaviour goes here
+				}
+				?></div>
+<div class="bottom-left-3">Exp date  12/21</div>
+</div>
+
+</div>
+
 
 
 
