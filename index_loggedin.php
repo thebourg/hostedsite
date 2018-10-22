@@ -262,7 +262,8 @@ display: none;
 					// Check to make sure that this message came from the correct domain.
 
 					var url = e.data.url;
-					if (e.origin !== 'https://glacial-retreat-66184.herokuapp.com')
+					//Ändras ej vid flytt till web
+					if (e.origin !== 'https://ipsoft-amelia-demodeveu-v3.ipsoft.com')
 						return;
 
 					 if (e.data.action === "checkout" && e.data.additionalData)
