@@ -257,7 +257,7 @@ display: none;
 			     if (e.data.action === "checkout" && e.data.additionalData)
 					 {
 			        //window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "virtual_card.php" + e.data.additionalData;
+							window.location.href = "https://glacial-retreat-66184.herokuapp.com/virtual_card.php" + e.data.additionalData;
 			    }
 			  }
 
