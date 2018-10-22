@@ -268,7 +268,7 @@ display: none;
 					 if (e.data.action === "checkout" && e.data.additionalData)
 					 {
 							//window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "virtual_card.php";
+							window.location.href = "_virtual_card.php?&data="+ e.data.additionalData;
 					}
 				}
 
@@ -280,7 +280,7 @@ display: none;
 					 */
 
 					var receiverElem = document.getElementById('receiver').contentWindow;
-					receiverElem.postMessage(data, "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html");
+					receiverElem.postMessage(data, "https://glacial-retreat-66184.herokuapp.com/login.html");
 				}
 			window.addEventListener('message', receiveMessage);
 			//document.write(data);
