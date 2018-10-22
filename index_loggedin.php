@@ -268,7 +268,7 @@ display: none;
 					 if (e.data.action === "checkout" && e.data.additionalData)
 					 {
 							//window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "_virtual_card.php?&data="+ e.data.additionalData;
+							window.location.href = "virtual_card.php?&data="+ e.data.additionalData;
 					}
 				}
 
