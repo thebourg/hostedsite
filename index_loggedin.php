@@ -262,13 +262,13 @@ display: none;
 					// Check to make sure that this message came from the correct domain.
 
 					var url = e.data.url;
-					if (e.origin !== 'https://ipsoft-amelia-demodeveu-v3.ipsoft.com')
+					if (e.origin !== 'https://glacial-retreat-66184.herokuapp.com')
 						return;
 
 					 if (e.data.action === "checkout" && e.data.additionalData)
 					 {
 							//window.location.href = "http://localhost:8000/Documents/AmeliawithMA/Templates/seb/privat/betala/kort/login.html"; //+ e.data.additionalData;
-							window.location.href = "virtual_card.php?&data="+ e.data.additionalData;
+							window.location.href = "https://glacial-retreat-66184.herokuapp.com/virtual_card.php?&data=" + e.data.additionalData;
 					}
 				}
 
