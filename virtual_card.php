@@ -371,6 +371,31 @@ display: none;
 																					font-size: 22px;
 																					color: white;
 																			}
+																			.top-left {
+																			    position: absolute;
+																			    top: 52px;
+																			    right: 220px;
+																					font-weight: bold;
+																					font-size: 15px;
+																					color: black;
+																			}
+																			.top-left-2 {
+																			    position: absolute;
+																			    top: 0.5px;
+																			    right: 400px;
+																					font-weight: bold;
+																					font-size: 7px;
+																					color: white;
+																			}
+
+																			.bottom-left-4 {
+																					position: absolute;
+																					bottom: 1px;
+																					right: 195px;
+																					font-size: 10px;
+																					color: white;
+
+																			}
 
 																			</style>
 
@@ -385,10 +410,13 @@ display: none;
 				} else {
 					// Fallback behaviour goes here
 				}
-				?>.gif" height="350" width="350">
+				?>.gif" height="500" width="660">
 
-<div class="bottom-left">5581	 4691	4151	1721 </div>
+<div class="bottom-left">5581			 4691			4151			1721 </div>
 <div class="top-right">Credit Card</div>
+<div class="top-left">3124 689</div>
+<div class="top-left-2">www.card.com - 555 111 478 </div>
+<div class="bottom-left-4">Credit Card </div>
 <div class="bottom-left-2">Master Card <?php
 				if (isset($_GET['data'])) {
 					echo $_GET['data'];
