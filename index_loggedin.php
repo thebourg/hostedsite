@@ -125,6 +125,13 @@ display: none;
 	display: none;
 }
 
+.before {
+    content: ">"; /* Insert content that looks like bullets */
+padding-right: 16px;
+color: black; /* Or a color you prefer */
+font-weight: bold;
+}
+
 #receiver {
 	border-radius: 0;
 }
@@ -186,9 +193,9 @@ display: none;
 
 		//Some stuff to remove leave message
 
-		window.onbeforeunload = function() {
-				return true;
-		};
+		//window.onbeforeunload = function() {
+				//return true;
+		//};
 		// Remove navigation prompt
 		window.onbeforeunload = null;
 
@@ -288,7 +295,7 @@ display: none;
 			//document.write("test");
 
 
-
+			window.onbeforeunload = null;
 		</script>
 
 
@@ -343,11 +350,12 @@ display: none;
                                       <div class="span9"><div class="row topblockarea">
 
 <div class="box block  col col-3 span9 productbenefitscontainerv2"><div class="panel-content">
-<div class="row">		<div><div><div class="box block  col col-2 span6 basic supportingcontentblockv2">  <h2 class="headline">Text 1</h2>    <div class="panel-content"><div><ul>
-<li>text</li>
-<li>text</li>
-<li>text</li>
-</ul><span class="buttonwrap"><span class="wanted-btn"><a id="OuterRegion_cphPrimaryContent_ArticleMain_TopBlockAreaContentPlaceholder_TopBlockAreaContent_EPiPropertyControl_ctl00_ctl01_ctl00_BlockArea_EPiPropertyControl_ctl00_ctl01_ctl00_ctl11_EPiPropertyControl_ctl00_ctl02_hlButton" class="btn wanted noexternalicon" onclick="toggleChatOverlay()"><span class="glare"></span><span></span></a></span></span></div>
+<div class="row">		<div><div><div class="box block  col col-2 span6 basic supportingcontentblockv2">  <h2 class="headline"></h2>    <div class="panel-content"><div><ul>
+<div class="before">
+<p> > Historik </p>
+<p>> Meddelanden</p>
+<p>> Betala </p>
+</ul></div> </div>
 
 
 
